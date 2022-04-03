@@ -1,6 +1,6 @@
 import Head from "next/head";
 import * as React from "react";
-import RegisterFrom from "../src/components/registerFrom";
+import From from "../src/components/from";
 
 export default function Home() {
 
@@ -13,9 +13,8 @@ export default function Home() {
       </Head>
 
       <main>
-      <RegisterFrom>
+      <From/>
 
-      </RegisterFrom>
       </main>
 
       <footer>
