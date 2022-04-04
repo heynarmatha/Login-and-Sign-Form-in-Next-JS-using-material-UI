@@ -9,7 +9,7 @@ export default function Home() {
     <div>
      
       <Head>
-        <title>Form </title>
+        <title>Form</title>
         <meta name="description" content="User CRUD app" />
       </Head>
 
