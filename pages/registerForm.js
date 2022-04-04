@@ -11,10 +11,12 @@ import {
 import GoogleIcon from "@mui/icons-material/Google";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
-
+import SideBar from "../src/components/sideBar";
 const RegisterForm = ({}) => {
 
   return (
+    <>
+    <SideBar>
       <Stack>
         <Box
           display="flex"
@@ -179,6 +181,9 @@ const RegisterForm = ({}) => {
           </Paper>
         </Box>
       </Stack>
+    </SideBar>
+    
+    </>
 
   );
 };

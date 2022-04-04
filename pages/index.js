@@ -1,7 +1,8 @@
 import Head from "next/head";
 import * as React from "react";
-import From from "../src/components/from";
-
+import RegisterForm from "../src/components/registerForm";
+import SideBar from "../src/components/sideBar";
+import Link from "next/link";
 export default function Home() {
 
   return (
@@ -13,8 +14,9 @@ export default function Home() {
       </Head>
 
       <main>
-      <From/>
-
+      <SideBar>
+        <RegisterForm/>
+      </SideBar>
       </main>
 
       <footer>

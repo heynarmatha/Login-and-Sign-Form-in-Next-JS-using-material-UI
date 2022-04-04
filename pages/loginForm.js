@@ -11,9 +11,13 @@ import {
 } from "@mui/material";
 import GoogleIcon from "@mui/icons-material/Google";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-const LoginForm = ({handleLoginbutton}) => {
+import Link from "next/link";
+import SideBar from "../src/components/sideBar";
+const LoginForm = ({}) => {
     console.log("*****************LoginForm*******************");
   return (
+    <>
+    <SideBar>
     <Stack>
       <Box
         display="flex"
@@ -107,7 +111,9 @@ const LoginForm = ({handleLoginbutton}) => {
               </Typography>
             </Stack>
             <Stack>
-              <Button variant="contained">Login</Button>
+              <Button variant="contained">
+              <Link href="/home">Login</Link>
+              </Button>
             </Stack>
             <Box
               sx={{
@@ -122,14 +128,18 @@ const LoginForm = ({handleLoginbutton}) => {
               >
                 New to the Platform
               </Typography>
-              <Button ml={2} color="primary" onClick={(e)=>handleLoginbutton(e)}>
-                Register here
+              <Button ml={2} color="primary">
+                <Link href="/registerForm">Register here</Link>
               </Button>
             </Box>
           </Box>
         </Paper>
       </Box>
     </Stack>
+
+    </SideBar>
+    
+    </>
   );
 };
 

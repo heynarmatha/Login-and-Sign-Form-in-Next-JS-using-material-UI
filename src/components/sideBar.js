@@ -1,21 +1,22 @@
-import { Box, Typography, Grid } from "@mui/material";
-import RegisterForm from "./registerForm";
-import LoginForm from "./loginForm";
-import { useState } from "react";
-const  From = () => {
-  const [value ,setValue] = useState(true)
+import { Box, Typography} from "@mui/material";
+
+const  SideBar = ({children}) => {
+
   console.log("*****************Form*******************");
   return (
-    <Grid container direction="row">
-      <Grid item sm={3} lg={1.7}>
+
+      <Box sx={{
+          display:"flex"
+      }}>
         <Box
           sx={{
             color: "black",
             height: "100vh",
+            width:"300px",
             padding: "20px",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-between",
+            justifyContent: "space-between"
           }}
         >
           <Box display="flex" alignItems="center">
@@ -40,34 +41,22 @@ const  From = () => {
           <Typography variant="subtitle2" component="h1" fontSize="30px">
             Make your Interface review easier
           </Typography>
-
-          <Typography>Image</Typography>
+              <img src="/image.png"/>
         </Box>
-      </Grid>
-      <Grid
-        item
-        lg={10.3}
-        sm={9}
-        sx={{
-          backgroundColor: "primary.main",
+        <Box sx={{
+            backgroundColor:"primary.main",
+            width:"100%",
+            display:"flex",
+            justifyContent:"center",
+            height:"100vh",
+            alignItems:"center"
         }}>
-          {value && (
-            <RegisterForm 
-            handleRegisterbutton={()=>{
-              setValue(false)
-            }}
-            />
-          )}
-          {!value && (
-            <LoginForm 
-            handleLoginbutton={()=>{
-              setValue(true)
-            }}/>
-
-          )}
-        </Grid>
-    </Grid>
+            {children}
+        </Box>
+      </Box>
+     
+  
   );
 }
 
-export default From;
+export default SideBar;
